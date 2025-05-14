@@ -1,1 +1,122 @@
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    background-color: rgb(14, 61, 38);
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  nav ul li {
+    cursor: pointer;
+  }
+  
+  nav ul li:hover {
+    text-decoration: underline;
+  }
+  
+  /* Layout Grid */
+  .container {
+    display: grid;
+    grid-template-areas: "Rural Development" "About" "Services" "Footer";
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .main {
+    background: rgb(243, 244, 246);
+    padding: 10px;
+  }
+  
+  .sidebar {
+    background: rgb(229, 231, 235);
+    padding: 10px;
+  }
+  .Services {
+      background: rgb(243, 244, 246);
+      padding: 10px;
+  }
+  .footer {
+    background-color: rgb(14, 61, 38);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  /* Apply Button */
+  Button {
+    padding: 10px 15px;
+    color: rgb(16, 19, 17);
+    background-color: rgb(246, 250, 252);
+    border-radius: 15px;
+    border: 1px solid rgb(13, 53, 30);
+    transition: all 210ms ease-in-out;
+    display: block;
+    margin: 0 auto;
+}
+ Button:hover {
+    background-color: rgb(13, 53, 30);
+    color: rgb(246, 250, 252);
+    cursor: pointer;
+    
+ }
+ .contentButton {
+    background-color: rgb(13, 53, 30);
+    color: rgb(246, 250, 252);
+    padding: 10px 15px;
+    margin: 20px auto;
+    transition: all 150ms ease-in-out;
+  }
+  .contentButton:hover {
+    color: rgb(13, 53, 30);
+    background-color: rgb(246, 250, 252);
+    cursor: pointer;
+  }
 
+  /* Responsive Media Queries */
+  @media (max-width: 600px) {
+    .container {
+      grid-template-areas: "Rural Development" "About";
+    }
+  
+    nav {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    body {
+      font-size: 10px;
+    }
+  
+    nav {
+      padding: 10px;
+    }
+  }
+  
